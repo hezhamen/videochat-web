@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { SocketContext } from "../Context";
-import { Assignment, Videocam } from "@material-ui/icons";
+import { Copy, Video } from "react-feather";
 import CopyToClipboard from "react-copy-to-clipboard";
 import {
   Typography,
@@ -61,7 +61,7 @@ const CustomAppBar = () => {
               borderRadius: "16px",
             }}
           >
-            <Videocam fontSize="large" className={classes.logoContainer} />
+            <Video />
           </Box>
           <Divider orientation="vertical" variant="middle" flexItem />
           <Typography variant="h5" align="center">
@@ -77,7 +77,7 @@ const CustomAppBar = () => {
               endAdornment: (
                 <CopyToClipboard text={me}>
                   <Button>
-                    <Assignment />
+                    <Copy />
                   </Button>
                 </CopyToClipboard>
               ),

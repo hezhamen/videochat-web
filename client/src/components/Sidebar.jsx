@@ -1,14 +1,6 @@
 import React, { useState, useContext } from "react";
-import {
-  Button,
-  TextField,
-  Grid,
-  Typography,
-  Container,
-  Paper,
-} from "@material-ui/core";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Assignment, Phone, PhoneDisabled } from "@material-ui/icons";
+import { Button, TextField, Grid } from "@material-ui/core";
+import { Phone, PhoneOff } from "react-feather";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { SocketContext } from "../Context";
@@ -42,7 +34,7 @@ const Sidebar = ({ children }) => {
             <Button
               variant="outlined"
               color="secondary"
-              startIcon={<PhoneDisabled fontSize="large" />}
+              startIcon={<PhoneOff fontSize="large" />}
               onClick={leaveCall}
               className={classes.margin}
             >
@@ -68,7 +60,7 @@ const Sidebar = ({ children }) => {
                       onClick={() => callUser(idToCall)}
                       color="primary"
                     >
-                      <Phone fontSize="large" />
+                      <Phone />
                     </Button>
                   ),
                 }}
